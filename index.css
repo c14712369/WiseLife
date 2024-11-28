@@ -1,0 +1,292 @@
+/* 背景與全局樣式 */
+body.dashboard-body {
+    background-color: #e9ecef;
+    color: #4a4a4a;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* 標題樣式 */
+.dashboard-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #3c4043;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-subtitle {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+/* 全局間距 */
+.row.g-4 {
+    margin-top: 1rem;
+}
+
+/* 卡片基礎樣式 */
+.custom-card {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    color: #4a4a4a;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 卡片標題 */
+.custom-card .card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #495057;
+    margin-bottom: 1rem;
+}
+
+/* 特定卡片樣式 */
+.location-card {
+    border-left: 5px solid #1F509A;
+}
+
+.stock-card {
+    border-left: 5px solid #1F509A;
+}
+
+.weather-card {
+    border-left: 5px solid #56ccf2;
+}
+
+.air-quality-card {
+    border-left: 5px solid #8dc26f;
+}
+
+.time-card {
+    border-left: 5px solid #ff9a9e;
+}
+
+.advice-card {
+    border-left: 5px solid #fbd786;
+}
+
+.news-card {
+    border-left: 5px solid #a18cd1;
+}
+
+.todo-card {
+    border-left: 5px solid #86a8e7;
+}
+
+/* 清單樣式（新聞 & 待辦事項） */
+.list-group-item {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: #f8f9fa;
+    color: #495057;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    transition: background 0.2s ease;
+}
+
+.list-group-item:hover {
+    background-color: #e2e6ea;
+}
+
+/* 清單連結樣式 */
+.list-group-item a {
+    text-decoration: none;
+    color: #333;
+    width: 100%;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.list-group-item a:hover {
+    color: #007bff;
+}
+
+/* 卡片樣式 */
+.stock-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    margin-bottom: 16px;
+}
+
+/* 標題樣式 */
+.stock-card h5 {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 通用文字樣式 */
+.stock-card p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* 今日股價樣式 */
+.stock-card .today-price.up {
+    color: red;
+}
+
+.stock-card .today-price.down {
+    color: green;
+}
+
+/* 漲跌幅樣式 */
+.stock-card .price-change.up {
+    color: red;
+}
+
+.stock-card .price-change.down {
+    color: green;
+}
+
+/* 按鈕樣式 */
+.btn-primary {
+    background-color: #6c757d;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 15px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #495057;
+    transform: scale(1.05);
+}
+
+/* 頁尾樣式 */
+footer {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+footer p {
+    color: #000;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.footer-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* 固定高度的新聞列表 */
+#news-list {
+    height: 300px;
+    /* 固定高度，例如 300px */
+    overflow-y: auto;
+    /* 如果內容超出，顯示垂直滾動條 */
+    overflow-x: hidden;
+    /* 禁止水平滾動 */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* 清單項目樣式 */
+.list-group-item {
+    height: 60px;
+    /* 每個項目的固定高度 */
+    display: flex;
+    align-items: center;
+    /* 垂直居中內容 */
+    overflow: hidden;
+    /* 隱藏溢出的內容 */
+    text-overflow: ellipsis;
+    /* 超出部分使用省略號 */
+    white-space: nowrap;
+    /* 禁止換行 */
+    background-color: #f8f9fa;
+    /* 淺灰背景 */
+    color: #495057;
+    /* 深灰文字 */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    transition: background 0.2s ease;
+}
+
+/* 滑鼠懸停效果 */
+.list-group-item:hover {
+    background-color: #e2e6ea;
+}
+
+/* 分頁導航容器 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    gap: 5px;
+    /* 分頁按鈕間距 */
+    width: 300px;
+    /* 固定寬度 */
+    height: 50px;
+    /* 固定高度 */
+    list-style: none;
+    /* 移除列表符號 */
+    margin: 0 auto;
+    /* 居中 */
+    padding: 0;
+}
+
+.page-item {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #007bff;
+}
+
+.page-item.active {
+    color: white;
+}
+
+.page-item.disabled {
+    color: #bbb;
+    pointer-events: none;
+}
+
+#stock-select {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 100%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智慧生活儀表板</title>
+    <!-- 引入 Bootstrap 樣式 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./Taiwan_Stocks.js"></script>
+</head>
+
+<body class="dashboard-body">
+    <div class="container py-4">
+        <!-- 標題區塊 -->
+        <header class="text-center mb-5">
+            <h1 class="dashboard-title">智慧生活儀表板</h1>
+            <h2 id="location" class="dashboard-subtitle">加載位置中...</h2>
+        </header>
+
+        <!-- 儀表板內容 -->
+        <div class="row g-4">
+            <!-- 第一行 -->
+            <div class="col-md-6">
+                <!-- 地點選擇 -->
+                <div class="card custom-card location-card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">📍 選擇地點</h5>
+                        <select id="location-selector" class="form-select">
+                            <option value="台北">台北</option>
+                            <option value="高雄">高雄</option>
+                            <option value="台中">台中</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- 天氣預報 -->
+                <div class="card custom-card weather-card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">🌤 天氣預報</h5>
+                        <p id="weather" class="card-text">加載中...</p>
+                        <div id="chart-container">
+                            <canvas id="weather-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 今日新聞 -->
+                <div class="card custom-card news-card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">📰 今日新聞</h5>
+                        <ul id="news-list" class="list-group"></ul>
+                        <!-- 分頁導航 -->
+                        <nav>
+                            <ul id="pagination" class="pagination justify-content-center mt-3"></ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- 股票市場資訊 -->
+                <div class="card custom-card stock-card">
+                    <div class="card-body">
+                        <h5 class="card-title">📈 股票市場資訊</h5>
+                        <!-- 股票代號下拉選單 -->
+                        <div class="input-group">
+                            <select id="stock-select" class="form-select">
+                                <option value="" disabled selected>選擇股票代號</option>
+                            </select>
+                        </div>
+                        <!-- 查詢結果 -->
+                        <div id="stock-result" class="mt-4"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 第二行 -->
+            <div class="col-md-6">
+                <!-- 即時日期與時間 -->
+                <div class="card custom-card time-card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">⏰ 即時日期與時間</h5>
+                        <p id="current-time" class="card-text">加載中...</p>
+                    </div>
+                </div>
+
+                <!-- 每日生活建議 -->
+                <div class="card custom-card advice-card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">💡 每日生活建議</h5>
+                        <div id="daily-advice" class="card-text">加載中...</div>
+                    </div>
+                </div>
+
+                <!-- 每日待辦事項 -->
+                <div class="card custom-card todo-card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">📋 今日待辦事項</h5>
+                        <ul id="todo-list" class="list-group mb-3"></ul>
+                        <div class="input-group">
+                            <input id="todo-input" type="text" class="form-control" placeholder="新增待辦事項...">
+                            <button id="add-todo" class="btn btn-primary">新增</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 空氣品質與紫外線指數 -->
+                <div class="card custom-card air-quality-card">
+                    <div class="card-body">
+                        <h5 class="card-title">🌫 空氣品質與紫外線指數</h5>
+                        <p id="air-quality" class="card-text">加載中...</p>
+                        <p id="uv-index" class="card-text">加載中...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer class="text-center mt-5">
+        <p style="color: #000;">© c14712369 版權所有</p>
+    </footer>
+
+    <!-- 引入 Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
