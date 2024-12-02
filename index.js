@@ -1,8 +1,8 @@
-// OpenWeather 和 Google Maps API 金鑰
-const WEATHER_API_KEY = "7d79d8c08ded337ce592fc57d83d1403";
-const GOOGLE_MAPS_API_KEY = "AIzaSyAc4PvYRaetwbNbiiL-KSO3Ot5zG4ozY5U";
+import { WEATHER_API_KEY, GOOGLE_MAPS_API_KEY } from './ApiKey.js';
+
 // 保存刷新間隔的引用
 let refreshInterval = null;
+
 // 存儲圖表實例
 let weatherChart = null;
 let temperature;
